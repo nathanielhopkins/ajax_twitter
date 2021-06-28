@@ -1,0 +1,92 @@
+.tweet-compose .tweet-actions{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.infinite-tweets, #feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .tweet {
+    min-height: 150px;
+    width: 450px;
+    background: white;
+    border-top: 1px solid #657786;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+
+    .tweeter {
+      margin: 20px;
+
+      a {
+        color: #1da1f2;
+        font-size: 20px;
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+      color: black;
+      font-size: 25px;
+    }
+
+    .mentions {
+      margin: 20px;
+
+      .tweetee a{
+        color: #1da1f2;
+      }
+    }
+
+  }
+}
+
+.mentioned-users {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  select {
+    height: 45px;
+  }
+
+  p {
+    color: #1da1f2;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .remove-mentioned-user {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1da1f2;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+}
+
+.fetch-more {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1da1f2;
+  color: white;
+  justify-self: center;
+  cursor: pointer;
+}

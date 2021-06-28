@@ -1,0 +1,30 @@
+<h1 class="page-header"><%= @user.username %></h1>
+
+<%= render 'follows/form', user: @user %>
+
+<div class="user-detail">
+  
+  <article class="left-half">
+    <ul id='feed'>
+      <% @user.tweets.each do |tweet| %>
+        <li><%= render 'tweets/tweet', tweet: tweet %></li>
+      <% end %>
+    </ul>
+  </article>
+
+  <article class="right-half">
+    <ul class="users">
+      Followers
+      <% @user.followers.each do |follower| %>
+        <li><a href="<%=follower.id%>">@<%= follower.username %></a></li>
+      <% end %>
+    </ul>
+
+    <ul class="users">
+      Followees
+      <% @user.followees.each do |followee| %>
+        <li><a href="<%=followee.id%>">@<%= followee.username %></a></li>
+      <% end %>
+    </ul>
+  </article>
+</div>
